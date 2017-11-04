@@ -1,0 +1,22 @@
+{
+  "name": "shan-autoshop-management",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arrra/shan-autoshop-management.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arrra/shan-autoshop-management/issues"
+  },
+  "homepage": "https://github.com/arrra/shan-autoshop-management#readme",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
+}
