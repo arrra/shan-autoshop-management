@@ -1,3 +1,5 @@
+'use strict';
+
 const Router = require('express').Router;
 const Customer = require('../models/Customer');
 
@@ -12,7 +14,7 @@ router.post('/', (req, res) => {
     city: req.body.city,
     state: req.body.state,
     address: req.body.address,
-  }
+  };
 
   Customer.createCustomer(customerAttr, (err, customer)=>{
     if(err){
@@ -21,6 +23,6 @@ router.post('/', (req, res) => {
     }
 
     res.status(201).json(customer);
-  })
-})
+  });
+});
 module.exports = router;

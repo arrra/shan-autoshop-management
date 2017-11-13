@@ -1,3 +1,5 @@
+'use strict';
+
 const customers = require('./customers');
 
 const attachRoutes = (app) => {

@@ -1,3 +1,5 @@
+'use strict';
+
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
@@ -9,16 +11,16 @@ const CustomerSchema = new Schema({
   city: {type: String},
   state: {type: String},
   address: {type: String},
-})
+});
 
 CustomerSchema.statics.createCustomer = function(customerAttr, cb) {
   if(typeof customerAttr !== 'object') {
     customerAttr = {};
-  };
+  }
 
   if(typeof cb !== 'function'){
     cb = function(){};
-  };
+  }
 
   const customer = new this(customerAttr);
 
@@ -26,8 +28,8 @@ CustomerSchema.statics.createCustomer = function(customerAttr, cb) {
     if(err) return cb(err);
 
     cb(null,customer);
-  })
-}
+  });
+};
 
 const Customer = mongoose.model('Customer', CustomerSchema);
 

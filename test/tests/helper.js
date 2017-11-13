@@ -1,3 +1,5 @@
+'use strict';
+
 const mongoose = require('mongoose');
 const db = require('../../db');
 const clearDB = require('mocha-mongoose')(db.uri);
@@ -13,9 +15,9 @@ beforeEach((done) => {
   mongoose.connect(db.uri,  (err)=> {
     if(err) return done(err);
     clearDB(done);
-  })
-})
+  });
+});
 
 afterEach((done) => {
   mongoose.disconnect(done);
-})
+});

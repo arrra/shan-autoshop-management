@@ -1,3 +1,5 @@
+'use strict';
+
 const faker = require('faker');
 const request = require('supertest');
 const app = require('../../../app');
@@ -25,9 +27,9 @@ describe('customer endpoint', () => {
             assert.typeOf(res.body.lastName, 'string', 'we have an string');
             assert.typeOf(res.body.email, 'string', 'we have an string');
             done();
-          })
-      })
-    })
+          });
+      });
+    });
 
     context('when customer creating a account WITHOUT required attributes', () => {
       it('should not save to db', (done) => {
@@ -37,8 +39,8 @@ describe('customer endpoint', () => {
             firstName: faker.name.firstName(),
             lastName: faker.name.lastName(),
           })
-          .expect(400, done)
-      })
-    })
-  })
-})
+          .expect(400, done);
+      });
+    });
+  });
+});
