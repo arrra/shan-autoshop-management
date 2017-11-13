@@ -2,6 +2,19 @@
   "plugins": ["node"],
   "extends": ["eslint:recommended", "plugin:node/recommended"],
   "rules": {
-    "node/exports-style": ["error", "module.exports"]
+    "node/exports-style": ["error", "module.exports"],
+    "semi": 2,
+    "node/no-unpublished-require": ["error", {
+      "allowModules": ["supertest", "chai", "faker", "mocha-mongoose", "chai-highlight"]
+    }]
+  },
+  "globals": {
+    "describe": true,
+    "context": true,
+    "expect": true,
+    "it": true,
+    "assert": true,
+    "beforeEach": true,
+    "afterEach": true
   }
 }

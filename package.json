@@ -17,10 +17,18 @@
   },
   "homepage": "https://github.com/arrra/shan-autoshop-management#readme",
   "dependencies": {
-    "express": "^4.16.2"
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "mongoose": "^4.13.2"
   },
   "devDependencies": {
+    "chai": "^4.1.2",
+    "chai-highlight": "^0.2.0",
     "eslint": "^4.10.0",
-    "eslint-plugin-node": "^5.2.1"
+    "eslint-plugin-node": "^5.2.1",
+    "faker": "^4.1.0",
+    "mocha": "^4.0.1",
+    "mocha-mongoose": "^1.2.0",
+    "supertest": "^3.0.0"
   }
 }
